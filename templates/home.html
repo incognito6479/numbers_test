@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+    <div class="text-center mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Порядок заказа в листе</th>
+                    <th scope="col">Номер заказа</th>
+                    <th scope="col">Стоимость в долларах $</th>
+                    <th scope="col">Стоимость в рублях ₽</th>
+                    <th scope="col">Срок поставки</th>
+                </tr>
+            </thead>
+            <tbody id="index">
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
