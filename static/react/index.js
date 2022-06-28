@@ -45,8 +45,16 @@ class GetData extends React.Component {
     }
 
     get_data() {
-        let fetch_url = "http://127.0.0.1:8000/get_data_from_db_react/";
-        fetch(fetch_url)
+        let fetch_url = "http://0.0.0.0:8000/get_data_from_db_react/";
+        fetch(fetch_url, {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrftoken,
+                // 'Access-Control-Request-Private-Network': "1"
+            }
+        })
             .then(res => res.json())
             .then((result) => {
                 console.log("Result", result['data'])
